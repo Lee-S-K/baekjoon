@@ -10,6 +10,7 @@ print(int('0xe6',16)) # 10진수로 재변환 (값, 진수)
 round(): 반올림을 수행 # round(반올림할 값, 반올림할 자릿수) -1은 소숫점 이상에서 반올림
 type(): 자료형의 종류 출력
 ```
+***
 - 문자열 함수
 ```python code
 print(str[::-1]): 문자열 뒤집기
@@ -34,6 +35,7 @@ eval(): 문자열 수식 계산 해준다.
     ex) exp = "36346345+1212*3535"
         print(eval(exp))
 ```
+***
 - 리스트 함수
 ```Python code
 list.index("찾을 문자"): 해당 값의 인덱스를 반환
@@ -52,12 +54,13 @@ list.append("넣을 값"): 가장 마지막에 삽입
 list.pop(): 가장 마지막 원소 삭제후 반환
 
 ```
+***
+- 유용한 코드
 ```Python code
 new = [(idx, i) for idx, i in enumerate arr]
 # idx = 인덱스 i 는 value arr = [5, 6, 7, 8] 일때
 # [(0, 5), (1, 6), (2, 7), (3, 8)] 형태의 배열 생성
-```
-```Python code
+
 new = max(arr, key=lambda x: x[0])[0]
 # 2차원 리스트에서 열의 첫번째 값이 가장 큰 원소를 리턴
 ```
