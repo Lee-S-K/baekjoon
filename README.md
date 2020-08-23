@@ -79,10 +79,30 @@ import sys
 n = input()
 a = [sys.stdin.readline() for i in range(n)]
  # a = ["1 2 3", "4 5 6"]
+ "Python을 사용하고 있다면, input 대신 sys.stdin.readline을 사용할 수 있다. 단, 이때는 맨 끝의 개행문자까지 같이 입력받기 때문에 문자열을 저장하고 싶을 경우 .rstrip()을 추가로 해 주는 것이 좋다."
+ ex) matrix = [list(map(int, list(sys.stdin.readline().rstrip()))) for _ in range(x)]
 ```
 
 - 재귀함수가 있는 경우, 최대 재귀 깊이를 설정
 ```python code
 import sys sys.setrecursionlimit(10**8) 
 # 10^8 까지 늘림.
+```
+
+- 인접 행렬 체크
+```python code
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+def bfs(matrix):
+    queue.append([0,0])
+    while queue:
+        a, b = queue[0][0], queue[0][1]
+        del queue[0]
+        for i in range(4):
+            na = a + dx[i]
+            nb = b + dy[i]
+            if 0 <= na < x and 0 <= nb < y and matrix[na][nb] == 1:
+               queue.append([na,nb])
+               matrix[na][nb] = matrix[a][b] + 1
 ```
