@@ -22,6 +22,10 @@ join(): 여러 문자열을 구분문자와 함께 합치는 함수
 ex) list = ["x", "y", "z"]
     print(".",join(list))
 
+    int로 된 리스트 출력하기 !!!!!!!!
+    print(" ".join(map(str, dfs(graph, s_node))))
+    print(" ".join(map(str, bfs(graph, s_node))))
+
 sorted(문자열 자료형): 각 문자를 정렬하는 함수
 문자열.split(토큰): 문자열을 토큰에 따라서 분리하는 함수
 문자열.find("찾을 문자" , 인덱스 번호) 
@@ -63,4 +67,22 @@ new = [(idx, i) for idx, i in enumerate arr]
 
 new = max(arr, key=lambda x: x[0])[0]
 # 2차원 리스트에서 열의 첫번째 값이 가장 큰 원소를 리턴
+```
+***
+# 입출력
+- input() x sys.stdin.readline()을 사용 : 입출력 속도가 젤 빠름
+<br>
+
+- 여러라인 입력 받을 시:
+```python code
+import sys 
+n = input()
+a = [sys.stdin.readline() for i in range(n)]
+ # a = ["1 2 3", "4 5 6"]
+```
+
+- 재귀함수가 있는 경우, 최대 재귀 깊이를 설정
+```python code
+import sys sys.setrecursionlimit(10**8) 
+# 10^8 까지 늘림.
 ```
