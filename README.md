@@ -22,7 +22,7 @@ join(): 여러 문자열을 구분문자와 함께 합치는 함수
 ex) list = ["x", "y", "z"]
     print(".",join(list))
 
-    int로 된 리스트 출력하기 !!!!!!!!
+    int로 된 리스트 출력하기 !!!!!!!
     print(" ".join(map(str, dfs(graph, s_node))))
     print(" ".join(map(str, bfs(graph, s_node))))
 
