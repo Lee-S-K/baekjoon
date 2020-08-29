@@ -106,3 +106,15 @@ def bfs(matrix):
                queue.append([na,nb])
                matrix[na][nb] = matrix[a][b] + 1
 ```
+
+# lambda
+- lambda 인자: 표현식
+- 사용예시: 
+    - 백준 10814: 나이순으로 정렬 후 나이가 같을시 들어온 순서대로 정렬:
+    ```
+    person_array = sorted(person, key = lambda x: x[0])
+    ```
+    - 백준 1966: z에 인덱스를 저장해서 튜플로 만든 후, 원소들의 첫번째 인덱스끼리 비교하여 max값을 찾은 후 그 max값이 현재 첫번째 원소와 같다면 break
+    ```
+    max(z, key=lambda x: x[0])[0]:
+    ```
