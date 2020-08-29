@@ -118,3 +118,9 @@ def bfs(matrix):
     ```
     max(z, key=lambda x: x[0])[0]:
     ```
+
+    - 백준 11650: x좌표를 기준으로 정렬하고 만약 x좌표가 동일할 시 y좌표를 기준으로 비교한다.
+    ```
+    new_coor = sorted(coor, key = lambda x : [x[0], x[1]]) 
+    // x[0] x좌표,  x[1] y좌표
+    ```
