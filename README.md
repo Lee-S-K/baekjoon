@@ -124,3 +124,12 @@ def bfs(matrix):
     new_coor = sorted(coor, key = lambda x : [x[0], x[1]]) 
     // x[0] x좌표,  x[1] y좌표
     ```
+
+# deepcopy
+- 리스트를 다른 리스트에 append할때 내장함수 copy를 불러와서 deepcopy 사용
+```
+import copy
+operator_list = []
+array = [1, 2, 3]
+operator_list.append(copy.deepcopy(array))
+```
